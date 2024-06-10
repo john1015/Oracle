@@ -58,6 +58,7 @@
 					    = 인라인 뷰 => 테이블 대신 => FROM
 */
 -- 회원가입
+/*
 CREATE TABLE member (
 	id VARCHAR2(20) PRIMARY KEY ,
 	pwd VARCHAR2(10) NOT NULL ,
@@ -72,3 +73,9 @@ CREATE TABLE member (
 	content CLOB,
 	regdate DATE DEFAULT SYSDATE	
 );
+*/
+-- CHAR , VARCHAR2 CLOB => ' '
+INSERT INTO member 	VALUES('hong' , '1234' , '홍길동' , '남자' , '2000-02-05' , '000-000' , '서울시 마포구 월드컵북로 21' , '' , '010-1111-1111' , 'hong@co.kr' , '홍길동입니다' , SYSDATE);
+COMMIT;
+
+ALTER TABLE member ADD admin CHAR(1) DEFAULT 'n';
